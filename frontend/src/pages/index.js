@@ -22,6 +22,8 @@ export default function Home() {
   const { user } = useSelector(state => state.auth);
 
   const [tokenCheck, setTokenCheck] = useState(false);
+  const [order, setOrder] = useState('asc');
+  const [sort, setSort] = useState('start');
 
   useEffect(() => {
     const accessToken = localStorage.getItem('accessToken');
@@ -46,14 +48,22 @@ export default function Home() {
     console.log(`Page changed to ${page}`);
   };
 
-  const handleFilterChange = async (event) => {
-    const selectedValue = event.target.value;
+  const handleFilterChange = async (e) => {
+    const selectedValue = e.target.value;
     await dispatch(filterRecords(selectedValue))
+    await dispatch(sortRecords(sort, order))
   };
 
   const handleSortItemChange = async (e) => {
     const selected = e.target.value;
-    await dispatch(sortRecords(selected));
+    await setSort(selected);
+    await dispatch(sortRecords(selected, order));
+  }
+
+  const handleOrderChange = async (e) => {
+    const selected = e.target.value;
+    await setOrder(selected);
+    await dispatch(sortRecords(sort, selected));
   }
 
   return tokenCheck && (
@@ -81,7 +91,14 @@ export default function Home() {
               {label: "End Time", value: "end"},
               {label: "Total Cost", value: "totalCost"}
             ]} />
-          <SortRadio />
+          <SortRadio
+            sortOrder={order}
+            onOrderChange={handleOrderChange}
+            options={[
+              {label: "Asc", value: "asc"},
+              {label: "Desc", value: "desc"},
+            ]}
+          />
         </Layout.SortFilterContainer>
       </Layout.SortFilterContainer>
       <Layout.TableContainer>

@@ -1,3 +1,4 @@
+import sortByProperty from '@/utils/sortUtil';
 import { FILTER_RECORDS, GET_RECORDS_SUCCESS, SORT_RECORDS } from '../types';
 
 const soundDefaultState = {
@@ -17,7 +18,7 @@ export default (state = soundDefaultState, action) => {
     case SORT_RECORDS: {
       return {
         ...state,
-        filteredRecords: [...state.filteredRecords].sort((a,b) => a[action.payload] - b[action.payload])
+        filteredRecords: [...state.filteredRecords].sort(sortByProperty(action.payload.sort, action.payload.order))
       }
     }
     case GET_RECORDS_SUCCESS: {

@@ -32,13 +32,13 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
-  app:
-    build: ./frontend
-    networks:
-      - proxy
-    ports:
-      - 4000:4000
-    depends_on:
-      - api
+  # app:
+  #   build: ./frontend
+  #   networks:
+  #     - proxy
+  #   ports:
+  #     - 4000:4000
+  #   depends_on:
+  #     - api
 
 

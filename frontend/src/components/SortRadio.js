@@ -20,34 +20,22 @@ const RadioText = styled.span`
   font-size: 12px;
 `;
 
-const SortRadio = () => {
-  const [sortOrder, setSortOrder] = useState('asc');
-
-  const handleRadioChange = (event) => {
-    setSortOrder(event.target.value);
-  };
-
+const SortRadio = ({ options=[], sortOrder="asc", onOrderChange = () => {} }) => {
   return (
     <RadioContainer>
-      <RadioLabel>
-        <RadioInput
-          type="radio"
-          value="asc"
-          checked={sortOrder === 'asc'}
-          onChange={handleRadioChange}
-        />
-        <RadioText>Asc</RadioText>
-      </RadioLabel>
-
-      <RadioLabel>
-        <RadioInput
-          type="radio"
-          value="desc"
-          checked={sortOrder === 'desc'}
-          onChange={handleRadioChange}
-        />
-        <RadioText>Desc</RadioText>
-      </RadioLabel>
+      {
+        options.map((item, idx) => (
+          <RadioLabel key={idx}>
+            <RadioInput
+              type="radio"
+              value={item.value}
+              checked={sortOrder === item.value}
+              onChange={onOrderChange}
+            />
+            <RadioText>{item.label}</RadioText>
+          </RadioLabel>
+        ))
+      }
     </RadioContainer>
   );
 };

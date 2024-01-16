@@ -2,10 +2,10 @@ import axios from "axios";
 import { baseUrl } from "@/config/network";
 import { FILTER_RECORDS, SORT_RECORDS, GET_RECORDS_FAILED, GET_RECORDS_PENDING, GET_RECORDS_SUCCESS } from "../types";
 
-export const sortRecords = (payload) => {
+export const sortRecords = (sort, order) => {
   return {
     type: SORT_RECORDS,
-    payload: payload
+    payload: { sort, order }
   }
 }
 
