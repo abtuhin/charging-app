@@ -31,6 +31,7 @@ jobs:
         run: cd backend
 
       - name: Install Dependencies, migrations and seed
+        working-directory: ./backend
         run: |
           npm install
           npm i -g sequelize-cli nodemon
