@@ -34,5 +34,4 @@ jobs:
         working-directory: ./backend
         run: |
           npm install
-          npm i -g sequelize-cli nodemon
           npm run test
