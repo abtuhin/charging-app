@@ -30,17 +30,9 @@ jobs:
       - name: Navigate to Backend Directory
         run: cd backend
 
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Install global dependencies
-        run : npm i -g sequelize-cli nodemon
-
-      - name: Run migrations and seeds
-        run: npm run migrate-db
-
-      - name: Run Tests
-        run: npm run test
-      
-      - name: Run App
-        run: npm start
+      - name: Install Dependencies, migrations and seed
+        run: |
+          npm install
+          npm i -g sequelize-cli nodemon
+          npm run migrate-db
+          npm run test
