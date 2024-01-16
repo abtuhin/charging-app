@@ -28,7 +28,7 @@ jobs:
           node-version: 14
 
       - name: Navigate to Backend Directory
-        run: cd app/backend
+        run: cd charging-app/backend
 
       - name: Install Dependencies
         run: npm install
