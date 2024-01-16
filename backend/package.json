@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon --exec babel-node server.js",
     "test:watch": "jest --watchAll",
-    "test": "jest test",
+    "test": "jest --testTimeout=5000",
     "coverage": "jest --coverage",
     "migrate-db": "sequelize db:migrate && sequelize db:seed:undo:all && sequelize db:seed:all --debug",
     "revert-db": "sequelize db:seed:undo:all && sequelize db:migrate:undo:all"
