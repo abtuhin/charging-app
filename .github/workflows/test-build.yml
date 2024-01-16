@@ -5,19 +5,9 @@ on:
       - main
 
 jobs:
-  build-and-test:
+  backend:
     runs-on: ubuntu-latest
     
-    services:
-      mysql:
-        image: mysql:latest
-        ports:
-          - 3306:3306
-        env:
-          MYSQL_ROOT_PASSWORD: root
-          MYSQL_DATABASE: emobility_charging
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -30,8 +20,32 @@ jobs:
       - name: Navigate to Backend Directory
         run: cd backend
 
-      - name: Install Dependencies, migrations and seed
+      - name: Install Dependencies, and test
         working-directory: ./backend
         run: |
           npm install
           npm run test
+  
+  fortned:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 14
+
+      - name: Navigate to frontend Directory
+        run: cd frontend
+
+      - name: Install Dependencies, build and start
+        working-directory: ./frontend
+        run: |
+          npm install
+          npm run build
+          npm run start
+  
+
