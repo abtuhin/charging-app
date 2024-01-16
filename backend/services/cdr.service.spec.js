@@ -129,4 +129,10 @@ describe('UserService', () => {
     expect(result).toEqual({ error: 'No record found.' });
   });
 
+  it('should handle errors and return Mock error', async () => {
+    const mockId = "vehicleId";
+    CDR.findOne.mockRejectedValueOnce(new Error('Random error from database.'));
+    await expect(CDRService.getLatestRecordByVehicle(mockId)).rejects.toThrow('Random error from database.');
+  });
+
 });
