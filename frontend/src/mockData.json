@@ -1,0 +1,701 @@
+[{
+  "end": "2024-01-16T19:39:00.099Z",
+  "id": 1,
+  "sessionId": 1,
+  "start": "2024-01-16T19:34:00.099Z",
+  "totalCost": 1364,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-16T19:44:00.099Z",
+  "id": 2,
+  "sessionId": 2,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 1466,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-16T19:49:00.099Z",
+  "id": 3,
+  "sessionId": 3,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 943,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-16T19:54:00.099Z",
+  "id": 4,
+  "sessionId": 4,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 1275,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-16T19:59:00.099Z",
+  "id": 5,
+  "sessionId": 5,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 969,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-16T20:04:00.099Z",
+  "id": 6,
+  "sessionId": 6,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 1467,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-16T20:09:00.099Z",
+  "id": 7,
+  "sessionId": 7,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 719,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-16T20:14:00.099Z",
+  "id": 8,
+  "sessionId": 8,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 762,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-16T20:19:00.099Z",
+  "id": 9,
+  "sessionId": 9,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 914,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-16T20:24:00.099Z",
+  "id": 10,
+  "sessionId": 10,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 630,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-16T20:29:00.099Z",
+  "id": 11,
+  "sessionId": 11,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 1022,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-16T20:34:00.099Z",
+  "id": 12,
+  "sessionId": 12,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 606,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-16T20:39:00.099Z",
+  "id": 13,
+  "sessionId": 13,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 925,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-16T20:44:00.099Z",
+  "id": 14,
+  "sessionId": 14,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 1225,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-16T20:49:00.099Z",
+  "id": 15,
+  "sessionId": 15,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 1351,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-16T20:54:00.099Z",
+  "id": 16,
+  "sessionId": 16,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 928,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-16T20:59:00.099Z",
+  "id": 17,
+  "sessionId": 17,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 1069,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-16T21:04:00.099Z",
+  "id": 18,
+  "sessionId": 18,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 1290,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-16T21:09:00.099Z",
+  "id": 19,
+  "sessionId": 19,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 826,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-16T21:14:00.099Z",
+  "id": 20,
+  "sessionId": 20,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 664,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-16T21:19:00.099Z",
+  "id": 21,
+  "sessionId": 21,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 1138,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-16T21:24:00.099Z",
+  "id": 22,
+  "sessionId": 22,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 1367,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-16T21:29:00.099Z",
+  "id": 23,
+  "sessionId": 23,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 791,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-16T21:34:00.099Z",
+  "id": 24,
+  "sessionId": 24,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 631,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-16T21:39:00.099Z",
+  "id": 25,
+  "sessionId": 25,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 1498,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-16T21:44:00.099Z",
+  "id": 26,
+  "sessionId": 26,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 591,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-16T21:49:00.099Z",
+  "id": 27,
+  "sessionId": 27,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 847,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-16T21:54:00.099Z",
+  "id": 28,
+  "sessionId": 28,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 1038,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-16T21:59:00.099Z",
+  "id": 29,
+  "sessionId": 29,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 991,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-16T22:04:00.099Z",
+  "id": 30,
+  "sessionId": 30,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 805,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-16T22:09:00.099Z",
+  "id": 31,
+  "sessionId": 31,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 1053,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-16T22:14:00.099Z",
+  "id": 32,
+  "sessionId": 32,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 943,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-16T22:19:00.099Z",
+  "id": 33,
+  "sessionId": 33,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 1361,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-16T22:24:00.099Z",
+  "id": 34,
+  "sessionId": 34,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 869,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-16T22:29:00.099Z",
+  "id": 35,
+  "sessionId": 35,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 957,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-16T22:34:00.099Z",
+  "id": 36,
+  "sessionId": 36,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 1278,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-16T22:39:00.099Z",
+  "id": 37,
+  "sessionId": 37,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 1272,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-16T22:44:00.099Z",
+  "id": 38,
+  "sessionId": 38,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 1235,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-16T22:49:00.099Z",
+  "id": 39,
+  "sessionId": 39,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 601,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-16T22:54:00.099Z",
+  "id": 40,
+  "sessionId": 40,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 620,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-16T22:59:00.099Z",
+  "id": 41,
+  "sessionId": 41,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 951,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-16T23:04:00.099Z",
+  "id": 42,
+  "sessionId": 42,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 894,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-16T23:09:00.099Z",
+  "id": 43,
+  "sessionId": 43,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 724,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-16T23:14:00.099Z",
+  "id": 44,
+  "sessionId": 44,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 1131,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-16T23:19:00.099Z",
+  "id": 45,
+  "sessionId": 45,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 1254,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-16T23:24:00.099Z",
+  "id": 46,
+  "sessionId": 46,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 669,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-16T23:29:00.099Z",
+  "id": 47,
+  "sessionId": 47,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 606,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-16T23:34:00.099Z",
+  "id": 48,
+  "sessionId": 48,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 854,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-16T23:39:00.099Z",
+  "id": 49,
+  "sessionId": 49,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 1257,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-16T23:44:00.099Z",
+  "id": 50,
+  "sessionId": 50,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 1369,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-16T23:49:00.099Z",
+  "id": 51,
+  "sessionId": 51,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 1213,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-16T23:54:00.099Z",
+  "id": 52,
+  "sessionId": 52,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 1369,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-16T23:59:00.099Z",
+  "id": 53,
+  "sessionId": 53,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 1337,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-17T00:04:00.099Z",
+  "id": 54,
+  "sessionId": 54,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 894,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-17T00:09:00.099Z",
+  "id": 55,
+  "sessionId": 55,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 1349,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-17T00:14:00.099Z",
+  "id": 56,
+  "sessionId": 56,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 1379,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-17T00:19:00.099Z",
+  "id": 57,
+  "sessionId": 57,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 685,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-17T00:24:00.099Z",
+  "id": 58,
+  "sessionId": 58,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 1459,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-17T00:29:00.099Z",
+  "id": 59,
+  "sessionId": 59,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 704,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-17T00:34:00.099Z",
+  "id": 60,
+  "sessionId": 60,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 999,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-17T00:39:00.099Z",
+  "id": 61,
+  "sessionId": 61,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 1315,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-17T00:44:00.099Z",
+  "id": 62,
+  "sessionId": 62,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 764,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-17T00:49:00.099Z",
+  "id": 63,
+  "sessionId": 63,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 737,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-17T00:54:00.099Z",
+  "id": 64,
+  "sessionId": 64,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 1360,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-17T00:59:00.099Z",
+  "id": 65,
+  "sessionId": 65,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 906,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-17T01:04:00.099Z",
+  "id": 66,
+  "sessionId": 66,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 866,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-17T01:09:00.099Z",
+  "id": 67,
+  "sessionId": 67,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 962,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-17T01:14:00.099Z",
+  "id": 68,
+  "sessionId": 68,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 1128,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-17T01:19:00.099Z",
+  "id": 69,
+  "sessionId": 69,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 966,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-17T01:24:00.099Z",
+  "id": 70,
+  "sessionId": 70,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 876,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-17T01:29:00.099Z",
+  "id": 71,
+  "sessionId": 71,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 745,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-17T01:34:00.099Z",
+  "id": 72,
+  "sessionId": 72,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 1184,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-17T01:39:00.099Z",
+  "id": 73,
+  "sessionId": 73,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 586,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-17T01:44:00.099Z",
+  "id": 74,
+  "sessionId": 74,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 1205,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-17T01:49:00.099Z",
+  "id": 75,
+  "sessionId": 75,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 594,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-17T01:54:00.099Z",
+  "id": 76,
+  "sessionId": 76,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 1165,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-17T01:59:00.099Z",
+  "id": 77,
+  "sessionId": 77,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 942,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-17T02:04:00.099Z",
+  "id": 78,
+  "sessionId": 78,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 1266,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-17T02:09:00.099Z",
+  "id": 79,
+  "sessionId": 79,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 984,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-17T02:14:00.099Z",
+  "id": 80,
+  "sessionId": 80,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 1478,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-17T02:19:00.099Z",
+  "id": 81,
+  "sessionId": 81,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 966,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-17T02:24:00.099Z",
+  "id": 82,
+  "sessionId": 82,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 668,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-17T02:29:00.099Z",
+  "id": 83,
+  "sessionId": 83,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 1032,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-17T02:34:00.099Z",
+  "id": 84,
+  "sessionId": 84,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 697,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-17T02:39:00.099Z",
+  "id": 85,
+  "sessionId": 85,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 761,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-17T02:44:00.099Z",
+  "id": 86,
+  "sessionId": 86,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 1164,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-17T02:49:00.099Z",
+  "id": 87,
+  "sessionId": 87,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 1361,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-17T02:54:00.099Z",
+  "id": 88,
+  "sessionId": 88,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 1237,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-17T02:59:00.099Z",
+  "id": 89,
+  "sessionId": 89,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 547,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-17T03:04:00.099Z",
+  "id": 90,
+  "sessionId": 90,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 1245,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-17T03:09:00.099Z",
+  "id": 91,
+  "sessionId": 91,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 1146,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-17T03:14:00.099Z",
+  "id": 92,
+  "sessionId": 92,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 1327,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-17T03:19:00.099Z",
+  "id": 93,
+  "sessionId": 93,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 624,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-17T03:24:00.099Z",
+  "id": 94,
+  "sessionId": 94,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 549,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-17T03:29:00.099Z",
+  "id": 95,
+  "sessionId": 95,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 848,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-17T03:34:00.099Z",
+  "id": 96,
+  "sessionId": 96,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 1153,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-17T03:39:00.099Z",
+  "id": 97,
+  "sessionId": 97,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 943,
+  "vehicleId": "PORSCHE1"
+}, {
+  "end": "2024-01-17T03:44:00.099Z",
+  "id": 98,
+  "sessionId": 98,
+  "start": "2024-01-16T19:44:00.099Z",
+  "totalCost": 1199,
+  "vehicleId": "BMW2"
+}, {
+  "end": "2024-01-17T03:49:00.099Z",
+  "id": 99,
+  "sessionId": 99,
+  "start": "2024-01-16T19:49:00.099Z",
+  "totalCost": 977,
+  "vehicleId": "AUDI3"
+}, {
+  "end": "2024-01-17T03:54:00.099Z",
+  "id": 100,
+  "sessionId": 100,
+  "start": "2024-01-16T19:39:00.099Z",
+  "totalCost": 790,
+  "vehicleId": "PORSCHE1"
+}]

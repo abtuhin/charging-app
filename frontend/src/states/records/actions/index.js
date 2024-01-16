@@ -1,18 +1,12 @@
 import axios from "axios";
 import { baseUrl } from "@/config/network";
-import { FILTER_RECORDS, SORT_RECORDS, GET_RECORDS_FAILED, GET_RECORDS_PENDING, GET_RECORDS_SUCCESS } from "../types";
+import { FILTER_RECORDS, GET_RECORDS_FAILED, GET_RECORDS_PENDING, GET_RECORDS_SUCCESS } from "../types";
 
-export const sortRecords = (sort, order) => {
-  return {
-    type: SORT_RECORDS,
-    payload: { sort, order }
-  }
-}
 
-export const filterRecords = (vechicleId) => {
+export const filterRecords = (payload) => {
   return {
     type: FILTER_RECORDS,
-    payload: vechicleId
+    payload: payload
   }
 }
 

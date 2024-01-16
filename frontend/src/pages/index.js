@@ -6,24 +6,24 @@ import SortRadio from '@/components/SortRadio';
 import Table from '@/components/Table'
 import Text from '@/components/Text';
 import { storeUser } from '@/states/auth/actions';
-import { filterRecords, getRecords, sortRecords } from '@/states/records/actions';
+import { filterRecords, getRecords } from '@/states/records/actions';
 import { Inter } from 'next/font/google'
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  const { filteredRecords, filterOptions } = useSelector(state => state.record);
+  const { filteredRecords, filterOptions, totalPages } = useSelector(state => state.record);
   const { user } = useSelector(state => state.auth);
 
   const [tokenCheck, setTokenCheck] = useState(false);
   const [order, setOrder] = useState('asc');
   const [sort, setSort] = useState('start');
+  const [filter, setFilter] = useState('all');
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     const accessToken = localStorage.getItem('accessToken');
@@ -38,32 +38,34 @@ export default function Home() {
   const fetchRecords = async () => {
     try {
       await dispatch(getRecords());
-      await dispatch(filterRecords("all"))
+      await dispatch(filterRecords({filter, sort, order, currentPage }));
     } catch (error) {
       console.log(error);
     }
   }
 
-  const handlePageChange = (page) => {
-    console.log(`Page changed to ${page}`);
+  const handlePageChange = async (page) => {
+    setCurrentPage(page);
+    await dispatch(filterRecords({filter, sort, order, currentPage: page }));
   };
 
   const handleFilterChange = async (e) => {
-    const selectedValue = e.target.value;
-    await dispatch(filterRecords(selectedValue))
-    await dispatch(sortRecords(sort, order))
+    const selected = e.target.value;
+    setFilter(selected);
+    setCurrentPage(1);
+    await dispatch(filterRecords({filter: selected, sort, order, currentPage: 1 }));
   };
 
   const handleSortItemChange = async (e) => {
     const selected = e.target.value;
-    await setSort(selected);
-    await dispatch(sortRecords(selected, order));
+    setSort(selected);
+    await dispatch(filterRecords({filter, sort: selected, order, currentPage }));
   }
 
   const handleOrderChange = async (e) => {
     const selected = e.target.value;
-    await setOrder(selected);
-    await dispatch(sortRecords(sort, selected));
+    setOrder(selected);
+    await dispatch(filterRecords({filter, sort, order: selected, currentPage }));
   }
 
   return tokenCheck && (
@@ -105,7 +107,7 @@ export default function Home() {
         <Table.Header />
         {filteredRecords.map((record, index) => <Table.Item key={index} record={record} />)}
       </Layout.TableContainer>
-      <Pagination totalPages={10} currentPage={2} onPageChange={handlePageChange}/>
+      <Pagination totalPages={totalPages} currentPage={currentPage} onPageChange={handlePageChange}/>
     </div>
   )
 }

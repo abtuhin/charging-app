@@ -43,34 +43,15 @@ const ArrowButton = styled.button`
 const Pagination = ({ totalPages, currentPage, onPageChange }) => {
   const renderPageButtons = () => {
     const buttons = [];
-    
-    const maxButtonsToShow = Math.min(totalPages, 3); 
-
-    // Show first three buttons
-    for (let i = 1; i <= maxButtonsToShow; i++) {
+  
+    for (let i = 1; i <= totalPages; i++) {
       buttons.push(
         <PageButton key={i} active={i === currentPage} onClick={() => onPageChange(i)}>
           {i}
         </PageButton>
       );
     }
-
-    // Show ellipsis if there are more pages
-    if (totalPages > maxButtonsToShow) {
-      if (currentPage + 1 <= totalPages - maxButtonsToShow) {
-        buttons.push(<Ellipsis key="ellipsis-start">...</Ellipsis>);
-      }
-
-      // Show last three buttons
-      for (let i = Math.max(currentPage + 1, totalPages - maxButtonsToShow + 1); i <= totalPages; i++) {
-        buttons.push(
-          <PageButton key={i} active={i === currentPage} onClick={() => onPageChange(i)}>
-            {i}
-          </PageButton>
-        );
-      }
-    }
-
+  
     return buttons;
   };
 
