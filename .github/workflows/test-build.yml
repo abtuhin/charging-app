@@ -1,0 +1,46 @@
+name: Charging app test and build
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    services:
+      mysql:
+        image: mysql:latest
+        ports:
+          - 3306:3306
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: emobility_charging
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 14
+
+      - name: Navigate to Backend Directory
+        run: cd app/backend
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Install global dependencies
+        run : npm i -g sequelize-cli nodemon
+
+      - name: Run migrations and seeds
+        run: npm run migrate-db
+
+      - name: Run Tests
+        run: npm run test
+      
+      - name: Run App
+        run: npm start
