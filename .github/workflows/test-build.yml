@@ -14,9 +14,7 @@ jobs:
         ports:
           - 3306:3306
         env:
-          MYSQL_ROOT_USER: root
           MYSQL_ROOT_PASSWORD: root
-          MYSQL_HOST: 127.0.0.1
           MYSQL_DATABASE: emobility_charging
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
@@ -37,5 +35,4 @@ jobs:
         run: |
           npm install
           npm i -g sequelize-cli nodemon
-          npm run migrate-db
           npm run test
