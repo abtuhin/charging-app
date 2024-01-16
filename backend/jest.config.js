@@ -8,6 +8,7 @@ module.exports = {
     '<rootDir>/coverage/',
     '<rootDir>/routes/',
     '<rootDir>/migrations/',
+    '<rootDir>/seeders/',
     '<rootDir>/node_modules/'
   ],
   collectCoverage: true,

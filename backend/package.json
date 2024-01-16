@@ -7,8 +7,8 @@
     "start": "nodemon --exec babel-node server.js",
     "test": "jest --watchAll",
     "coverage": "jest --coverage",
-    "migrate-db": "sequelize db:migrate --debug",
-    "revert-db": "sequelize db:migrate:undo:all"
+    "migrate-db": "sequelize db:migrate && sequelize db:seed:undo:all && sequelize db:seed:all --debug",
+    "revert-db": "sequelize db:seed:undo:all && sequelize db:migrate:undo:all"
   },
   "keywords": [
     "node",
