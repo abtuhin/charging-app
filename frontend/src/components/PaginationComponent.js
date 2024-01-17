@@ -18,11 +18,11 @@ const PaginationComponent = ({ totalPages, currentPage, onPageChange }) => {
 
   return (
     <Pagination.PaginationContainer>
-      <Pagination.ArrowButton data-testid="pagination-prev-button" disabled={currentPage === 1 ? "true": "false"} onClick={() => onPageChange(currentPage - 1)}>
+      <Pagination.ArrowButton data-testid="pagination-prev-button" disabled={currentPage === 1} onClick={() => onPageChange(currentPage - 1)}>
         &lt;
       </Pagination.ArrowButton>
       {renderPageButtons()}
-      <Pagination.ArrowButton data-testid="pagination-next-button" disabled={currentPage === totalPages ? "true": "false"} onClick={() => onPageChange(currentPage + 1)}>
+      <Pagination.ArrowButton data-testid="pagination-next-button" disabled={currentPage === totalPages} onClick={() => onPageChange(currentPage + 1)}>
         &gt;
       </Pagination.ArrowButton>
     </Pagination.PaginationContainer>
