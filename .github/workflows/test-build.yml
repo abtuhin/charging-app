@@ -28,20 +28,21 @@ jobs:
         with:
           node-version: 14
 
+      - name: Set up Environment Variables
+        run: echo "DB_NAME=emobility_charging" >> backend/.env
+             && echo "DB_USER=root" >> backend/.env
+             && echo "DB_PASS=root" >> backend/.env
+             && echo "DB_HOST=mysql" >> backend/.env
+
       - name: Navigate to Backend Directory
         run: cd backend
-
-      - name: Set up Environment Variables
-        run: echo "DB_NAME=emobility_charging" >> .env
-             && echo "DB_USER=root" >> .env
-             && echo "DB_PASS=root" >> .env
-             && echo "DB_HOST=mysql" >> .env
 
       - name: Install Dependencies and run migrations
         run: |
           npm install
           npm i -g sequelize-cli
           npm run migrate-db
+        working-directory: backend
           
   backend:
     runs-on: ubuntu-latest
