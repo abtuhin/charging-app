@@ -25,6 +25,38 @@ Node based REST API and an React App to manage Charge Data Records (CDR).
 - visit **http://localhost:4000/** to use the frontend app
 - check API endpoints on **http://localhost:8080/** 
 
+## Installtaion HOST mahcine
+### DATABASE
+- cd backend
+- create **.env** variable and add the following or update your configuration for DB_NAME, DB_USER, and DB_PASS
+
+```
+DB_NAME="emobility_charging"
+DB_USER="root"
+DB_PASS="root"
+DB_HOST="localhost"
+CLIENT_HOST="localhost"
+HOST_PORT="8080"
+APP_PORT="4000"
+JWT_ACCESS_TOKEN=JWT_ACCESS_TOKEN
+JWT_REFRESH_TOKEN=JWT_REFRESH_TOKEN
+API_VERSION=v1
+```
+- npm i -g sequelize-cli nodemon
+- npm run migrate-db
+
+### API
+- cd backend
+- npm install
+- npm run start
+
+### APP
+- cd frontend
+- npm install
+- npm run dev
+
+
+
 ## API Endpoints
 
 - register: http://localhost:8080/users/register
