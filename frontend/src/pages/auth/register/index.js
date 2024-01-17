@@ -1,12 +1,13 @@
-import Auth from "@/components/auth";
+import Auth from "@/styled/Auth";
 import { useState } from "react";
 import Link from "next/link";
-import Text from "@/components/Text";
+import Text from "@/styled/Text";
 import { useDispatch } from "react-redux";
 import { register } from "@/states/auth/actions";
 import { useRouter } from "next/router";
+import formValidator from "@/utils/formValidator";
 
-const Register = () => {
+const RegisterComponent = () => {
   const dispatch = useDispatch();
   const router = useRouter();
   const [formData, setFormData] = useState({
@@ -16,34 +17,7 @@ const Register = () => {
     password: '',
     confirmPassword: '' 
   });
-
-
   const [errors, setErrors] = useState({});
-
-  const validateForm = () => {
-    const newErrors = {};
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email || !emailRegex.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
-    }
-    if (!formData.password || formData.password.length < 4) {
-      newErrors.password = 'Password must be at least 4 characters';
-    }
-    if (formData.password !== formData.confirmPassword) {
-      newErrors.confirmPassword = 'Passwords do not match';
-    }
-    if (!formData.firstname || formData.firstname.length < 2) {
-      newErrors.firstname = 'First name must be at least 2 characters';
-    }
-    if (!formData.lastname || formData.lastname.length < 2) {
-      newErrors.lastname = 'Last name must be at least 2 characters';
-    }
-
-    setErrors(newErrors);
-
-    return Object.keys(newErrors).length === 0;
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -52,7 +26,11 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if(validateForm()){
+    const hasErrors = formValidator(formData);
+    const isValid = Object.keys(hasErrors).length === 0;
+    setErrors(hasErrors);
+
+    if(isValid){
       try {
         const response = await dispatch(register({
           firstname: formData.firstname,
@@ -72,7 +50,7 @@ const Register = () => {
     <Auth.AuthContainer>
       <Text.TextBigBold style={{textAlign: 'center'}}>User Registration</Text.TextBigBold>
       <form onSubmit={handleSubmit}>
-        <Auth.FormLabel htmlFor="firstname">First Name:</Auth.FormLabel>
+        <Auth.FormLabel htmlFor="firstname">First Name</Auth.FormLabel>
         <Auth.FormInput
           type="text"
           id="firstname"
@@ -83,7 +61,7 @@ const Register = () => {
         />
         {errors.firstname && <Text.ErrorText>{errors.firstname}</Text.ErrorText>}
 
-        <Auth.FormLabel htmlFor="lastname">Last Name:</Auth.FormLabel>
+        <Auth.FormLabel htmlFor="lastname">Last Name</Auth.FormLabel>
         <Auth.FormInput
           type="text"
           id="lastname"
@@ -94,7 +72,7 @@ const Register = () => {
         />
         {errors.lastname && <Text.ErrorText>{errors.lastname}</Text.ErrorText>}
 
-        <Auth.FormLabel htmlFor="email">Email:</Auth.FormLabel>
+        <Auth.FormLabel htmlFor="email">Email</Auth.FormLabel>
         <Auth.FormInput
           type="email"
           id="email"
@@ -105,7 +83,7 @@ const Register = () => {
         />
         {errors.email && <Text.ErrorText>{errors.email}</Text.ErrorText>}
 
-        <Auth.FormLabel htmlFor="password">Password:</Auth.FormLabel>
+        <Auth.FormLabel htmlFor="password">Password</Auth.FormLabel>
         <Auth.FormInput
           type="password"
           id="password"
@@ -116,7 +94,7 @@ const Register = () => {
         />
         {errors.password && <Text.ErrorText>{errors.password}</Text.ErrorText>}
 
-        <Auth.FormLabel htmlFor="confirm_password">Confirm Password:</Auth.FormLabel>
+        <Auth.FormLabel htmlFor="confirm_password">Confirm Password</Auth.FormLabel>
         <Auth.FormInput
           type="password"
           id="confirm_password"
@@ -136,4 +114,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default RegisterComponent;

@@ -1,12 +1,12 @@
-import Auth from "@/components/auth";
 import { useState } from "react";
 import Link from "next/link";
-import Text from "@/components/Text";
+import Text from "@/styled/Text";
 import { useDispatch } from "react-redux";
 import { login } from "@/states/auth/actions";
 import { useRouter } from "next/router";
+import Auth from "@/styled/Auth";
 
-const Login = () => {
+const LoginComponent = () => {
   const dispatch = useDispatch();
   const router = useRouter()
   const [formData, setFormData] = useState({
@@ -33,9 +33,11 @@ const Login = () => {
 
   return (
     <Auth.AuthContainer>
+      
       <Text.TextBigBold style={{textAlign: "center"}}>User Login</Text.TextBigBold>
+      
       <form onSubmit={handleSubmit}>
-        <Auth.FormLabel htmlFor="email">Email:</Auth.FormLabel>
+        <Auth.FormLabel htmlFor="email">Email</Auth.FormLabel>
         <Auth.FormInput
           type="email"
           id="email"
@@ -45,7 +47,7 @@ const Login = () => {
           required
         />
 
-        <Auth.FormLabel htmlFor="password">Password:</Auth.FormLabel>
+        <Auth.FormLabel htmlFor="password">Password</Auth.FormLabel>
         <Auth.FormInput
           type="password"
           id="password"
@@ -64,4 +66,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginComponent;

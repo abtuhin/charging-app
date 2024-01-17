@@ -1,16 +1,15 @@
-import DropdownFilterComponent from '@/components/Filter';
-import Layout from '@/components/Layout';
-import Pagination from '@/components/Pagination';
-import SortComponent from '@/components/Sort';
-import SortRadio from '@/components/SortRadio';
-import Table from '@/components/Table'
-import Text from '@/components/Text';
+import Text from '@/styled/Text';
 import { storeUser } from '@/states/auth/actions';
 import { filterRecords, getRecords } from '@/states/records/actions';
-import { Inter } from 'next/font/google'
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import FilterComponent from '@/components/FilterComponent';
+import SortComponent from '@/components/SortComponent';
+import OrderComponent from '@/components/OrderComponent';
+import { TableHeader, TableItem } from '@/components/TableComponent';
+import PaginationComponent from '@/components/PaginationComponent';
+import Layout from '@/styled/Layout';
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -27,7 +26,7 @@ export default function Home() {
 
   useEffect(() => {
     const accessToken = localStorage.getItem('accessToken');
-    if (!accessToken) router.push('/auth/login'); 
+    if (!accessToken) router.replace('/auth/login'); 
     else {
       dispatch(storeUser(JSON.parse(localStorage.getItem("user"))))
       setTokenCheck(true);
@@ -70,21 +69,21 @@ export default function Home() {
 
   return tokenCheck && (
     <div style={{marginTop: "2%", marginBottom: "2%"}}>
-      <Layout.SortFilterContainer>
+      <Layout.SortOrderContainer>
         <Text.WelcomeText>Welcome, {`${user.firstname} ${user.lastname}`}</Text.WelcomeText>
         <Text.TextSmall style={{cursor: 'pointer'}} onClick={() => {
           localStorage.clear();
           router.replace("/auth/login");
         }}>Logout</Text.TextSmall>
-      </Layout.SortFilterContainer>
+      </Layout.SortOrderContainer>
       <br/>
-      <Layout.SortFilterContainer>
-        <Layout.SortFilterContainer>
+      <Layout.SortOrderContainer>
+        <Layout.SortOrderContainer>
           <Text.TextSmallBold>Filter by Vehicle</Text.TextSmallBold>
-          <DropdownFilterComponent filterOptions={filterOptions} onFilterChange={handleFilterChange} />
-        </Layout.SortFilterContainer>
+          <FilterComponent filterOptions={filterOptions} onFilterChange={handleFilterChange} />
+        </Layout.SortOrderContainer>
         <Text.TextBigBold>Charging Data Records</Text.TextBigBold> 
-        <Layout.SortFilterContainer>
+        <Layout.SortOrderContainer>
           <Text.TextSmallBold>Sort By</Text.TextSmallBold>
           <SortComponent
             onSortItemChange={handleSortItemChange} 
@@ -93,7 +92,7 @@ export default function Home() {
               {label: "End Time", value: "end"},
               {label: "Total Cost", value: "totalCost"}
             ]} />
-          <SortRadio
+          <OrderComponent
             sortOrder={order}
             onOrderChange={handleOrderChange}
             options={[
@@ -101,13 +100,13 @@ export default function Home() {
               {label: "Desc", value: "desc"},
             ]}
           />
-        </Layout.SortFilterContainer>
-      </Layout.SortFilterContainer>
+        </Layout.SortOrderContainer>
+      </Layout.SortOrderContainer>
       <Layout.TableContainer>
-        <Table.Header />
-        {filteredRecords.map((record, index) => <Table.Item key={index} record={record} />)}
+        <TableHeader />
+        {filteredRecords.map((record, index) => <TableItem key={index} record={record} />)}
       </Layout.TableContainer>
-      <Pagination totalPages={totalPages} currentPage={currentPage} onPageChange={handlePageChange}/>
+      <PaginationComponent totalPages={totalPages} currentPage={currentPage} onPageChange={handlePageChange}/>
     </div>
   )
 }

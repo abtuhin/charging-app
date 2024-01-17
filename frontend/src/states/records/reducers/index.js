@@ -1,5 +1,6 @@
 import sortByProperty from '@/utils/sortUtil';
 import { FILTER_RECORDS, GET_RECORDS_SUCCESS } from '../types';
+import filterByVehicle from '@/utils/filterUtil';
 
 const MAX_ITEM = 10;
 
@@ -14,7 +15,7 @@ export default (state = soundDefaultState, action) => {
   switch (action.type) {
     case FILTER_RECORDS: {
       const sortedItems = [...state.records].sort(sortByProperty(action.payload.sort, action.payload.order));
-      const filteredItems = action.payload.filter === "all" ? [...sortedItems] :[...sortedItems].filter(item => item.vehicleId === action.payload.filter);
+      const filteredItems = filterByVehicle([...sortedItems], action.payload.filter);
       
       const totalPages = Math.ceil(filteredItems.length / MAX_ITEM);
 

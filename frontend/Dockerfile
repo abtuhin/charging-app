@@ -6,6 +6,7 @@ RUN npm i
 
 EXPOSE 4000
 
+RUN npm run test
 RUN npm run build
 
 CMD ["npm", "start"]

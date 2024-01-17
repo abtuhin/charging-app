@@ -18,6 +18,6 @@ export const getRecords = () => async dispatch => {
     return res;
   } catch (e) {
     dispatch({type: GET_RECORDS_FAILED, payload: e.message});
-    throw new Error(e);
+    throw new Error(e.message);
   }
 };
