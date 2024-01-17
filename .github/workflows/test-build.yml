@@ -31,22 +31,18 @@ jobs:
       - name: Navigate to Backend Directory
         run: cd backend
 
-      - name: Install Dependencies
-        run: |
-          npm install
-          npm i -g sequelize-cli
-
       - name: Set up Environment Variables
         run: echo "DB_NAME=emobility_charging" >> .env
              && echo "DB_USER=root" >> .env
              && echo "DB_PASS=root" >> .env
              && echo "DB_HOST=mysql" >> .env
 
-      - name: Run migrations
+      - name: Install Dependencies and run migrations
         run: |
+          npm install
+          npm i -g sequelize-cli
           npm run migrate-db
-
-
+          
   backend:
     runs-on: ubuntu-latest
     
