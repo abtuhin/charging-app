@@ -5,6 +5,48 @@ on:
       - main
 
 jobs:
+  migrations:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:latest
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: emobility_charging
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 14
+
+      - name: Navigate to Backend Directory
+        run: cd app/backend
+
+      - name: Install Dependencies
+        run: |
+          npm install
+          npm i -g sequelize-cli
+
+      - name: Set up Environment Variables
+        run: echo "DB_NAME=emobility_charging" >> .env
+             && echo "DB_USER=root" >> .env
+             && echo "DB_PASS=root" >> .env
+             && echo "DB_HOST=mysql" >> .env
+
+      - name: Run migrations
+        run: |
+          npm run migrate-db
+
+
   backend:
     runs-on: ubuntu-latest
     
