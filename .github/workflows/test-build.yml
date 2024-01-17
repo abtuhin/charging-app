@@ -32,7 +32,7 @@ jobs:
         run: echo "DB_NAME=emobility_charging" >> backend/.env
              && echo "DB_USER=root" >> backend/.env
              && echo "DB_PASS=root" >> backend/.env
-             && echo "DB_HOST=mysql" >> backend/.env
+             && echo "DB_HOST=localhost" >> backend/.env
 
       - name: Navigate to Backend Directory
         run: cd backend
