@@ -80,7 +80,7 @@ jobs:
       - name: Navigate to frontend Directory
         run: cd frontend
 
-      - name: Install Dependencies, build and start
+      - name: Install Dependencies, test and build
         working-directory: ./frontend
         run: |
           npm install
